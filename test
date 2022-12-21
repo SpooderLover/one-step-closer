@@ -21,7 +21,6 @@ def lambda_handler(event,context):
             sql3 ="(status, timestamp) VALUES (%s, %s)"
             sql4 =f'{sql} {sql2} {sql3}'
             val = ((event["status"]), dt_string)
-            hide = 'i love maplestory'
             cursor.execute(sql4, val)
         connection.commit()
      
