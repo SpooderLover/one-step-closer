@@ -1,0 +1,73 @@
+import pymysql
+import json
+from datetime import datetime
+
+endpoint = 'zqwesxdrcfvgbhnjmk,'
+username = 'admdtfyvgbthunjin'
+password = 'Passwdrcfvgbhnjord123'
+databasename = 'hisxdcgfvhbnjkmltdb'
+
+
+#connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
+
+def lambda_handler(event,context):
+    connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
+    with connection:
+        with connection.cursor() as cursor:
+            now = datetime.now()
+            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            sql = "INSERT INTO"
+            sql2 = (event["sensor"])
+            sql3 ="(status, timestamp) VALUES (%s, %s)"
+            sql4 =f'{sql} {sql2} {sql3}'
+            val = ((event["status"]), dt_string)
+            hide = 'i love maplestory'
+            cursor.execute(sql4, val)
+        connection.commit()
+     
+    cursor.close()
+    connection.close()
+    
+    endpoint = 'xdgcfvhbjn'
+
+
+
+connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
+
+def lambda_handler(event,context):
+    connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
+    with connection:
+        with connection.cursor() as cursor:
+            now = datetime.now()
+            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            sql = "INSERT INTO"
+            sql2 = (event["sensor"])
+            sql3 ="(status, timestamp) VALUES (%s, %s)"
+            sql4 =f'{sql} {sql2} {sql3}'
+            val = ((event["status"]), dt_string)
+            cursor.execute(sql4, val)
+        connection.commit()
+     
+    cursor.close()
+    connection.close()
+       
+
+
+connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
+
+def lambda_handler(event,context):
+    connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
+    with connection:
+        with connection.cursor() as cursor:
+            now = datetime.now()
+            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            sql = "INSERT INTO"
+            sql2 = (event["sensor"])
+            sql3 ="(status, temperature, timestamp) VALUES (%s, %s, %s)"
+            sql4 =f'{sql} {sql2} {sql3}'
+            val = ((event["status"]), (event["details"]), dt_string)
+            cursor.execute(sql4, val)
+        connection.commit()
+     
+    cursor.close()
+    connection.close()
