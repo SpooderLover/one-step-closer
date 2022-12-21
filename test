@@ -1,72 +1,112 @@
-import pymysql
-import json
-from datetime import datetime
+import turtle
 
-endpoint = 'zqwesxdrcfvgbhnjmk,'
-username = 'admdtfyvgbthunjin'
-password = 'Passwdrcfvgbhnjord123'
-databasename = 'hisxdcgfvhbnjkmltdb'
+t=turtle.Turtle()
+t.penup()
+t.goto(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.forward(100)
+t.goto(20,50)
+t.right(90)
+t.forward(100)
 
+t=turtle.Turtle()
+t.penup()
+t.goto(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.right(90)
+t.forward(150)
+t.goto(-30,50)
+t.circle(50,None,100)
 
-#connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
+t=turtle.Turtle()
+t.penup()
+#draw straight line
+t.goto(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.right(180)
+t.circle(50,180)
 
-def lambda_handler(event,context):
-    connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
-    with connection:
-        with connection.cursor() as cursor:
-            now = datetime.now()
-            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-            sql = "INSERT INTO"
-            sql2 = (event["sensor"])
-            sql3 ="(status, timestamp) VALUES (%s, %s)"
-            sql4 =f'{sql} {sql2} {sql3}'
-            val = ((event["status"]), dt_string)
-            cursor.execute(sql4, val)
-        connection.commit()
-     
-    cursor.close()
-    connection.close()
-    
-    endpoint = 'xdgcfvhbjn'
+t=turtle.Turtle()
+t.penup()
+t.goto(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.forward(100)
+t.goto(20,50)
+t.right(90)
+t.forward(100)
 
+t=turtle.Turtle()
+t.penup()
+t.setpos(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.forward(100)
+t.backward(100)
+t.right(90)
+t.forward(100)
+t.left(90)
+t.forward(100)
+t.backward(100)
+t.right(90)
+t.forward(100)
 
+t=turtle.Turtle()
+t.penup()
+t.goto(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.right(65)
+t.forward(100)
+t.left(130)
+t.forward(100)
+ 
+t.penup()
+t.goto(13,-43)
+t.left(25)
+t.pendown()
+t.backward(100)
 
-connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
+t=turtle.Turtle()
+t.penup()
+t.setpos(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.forward(100)
+t.backward(100)
+t.right(90)
+t.forward(100)
+t.left(90)
+t.forward(100)
+t.backward(100)
+t.right(90)
+t.forward(100)
+t.left(90)
+t.forward(100)
 
-def lambda_handler(event,context):
-    connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
-    with connection:
-        with connection.cursor() as cursor:
-            now = datetime.now()
-            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-            sql = "INSERT INTO"
-            sql2 = (event["sensor"])
-            sql3 ="(status, timestamp) VALUES (%s, %s)"
-            sql4 =f'{sql} {sql2} {sql3}'
-            val = ((event["status"]), dt_string)
-            cursor.execute(sql4, val)
-        connection.commit()
-     
-    cursor.close()
-    connection.close()
-       
-
-
-connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
-
-def lambda_handler(event,context):
-    connection = pymysql.connect(host=endpoint, user=username, passwd=password, db=databasename)
-    with connection:
-        with connection.cursor() as cursor:
-            now = datetime.now()
-            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-            sql = "INSERT INTO"
-            sql2 = (event["sensor"])
-            sql3 ="(status, temperature, timestamp) VALUES (%s, %s, %s)"
-            sql4 =f'{sql} {sql2} {sql3}'
-            val = ((event["status"]), (event["details"]), dt_string)
-            cursor.execute(sql4, val)
-        connection.commit()
-     
-    cursor.close()
-    connection.close()
+t=turtle.Turtle()
+t.penup()
+t.goto(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.right(90)
+t.forward(150)
+t.goto(-30,50)
+t.right(-90)
+t.circle(-50,180,100)
+t.penup()
+t.goto(0,-40)
+t.left(135)
+t.pendown()
+t.forward(70)
