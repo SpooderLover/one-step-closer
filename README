@@ -1,0 +1,17 @@
+## Problem-solving
+
+If the menu is not visible, make sure these things.
+
+- Are the proper roles assigned the "Access administration menu" and "Use the administration pages and help" permissions?
+- Does your theme's html.tpl.php produce the '$page bottom' variable?
+
+### FAQ
+
+A: Even though I enabled "Aggregate and compress CSS files," admin menu.css remains. Is this standard?
+
+A: This is the desired behavior, yes. The administration menu module loads its stylesheet only when necessary (i.e., when logged-on, administrative users request a page).
+Configuration ##
+
+1. Select Administration > Extend and enable the module.
+1. From the drop-down menu when adding a new field to a content type or custom entity type, select "Double Field".
+1. Define the two subfields on the Field Settings form for the Double Field as you would
