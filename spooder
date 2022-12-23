@@ -76,10 +76,6 @@ def decrypt(message):
  
 # Hard-coded driver function to run the program
 def main():
-    message = "TPCTF"
-    result = encrypt(message.upper())
-    print (result)
- 
     message1 = "- .--. -.-. - ..-."
     result1 = decrypt(message1)
     brack = "{"
